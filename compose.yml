@@ -97,7 +97,6 @@ services:
       - type: bind
         source: .
         target: /npm
-    # working_dir: src
 
   mailpit:
     image: axllent/mailpit

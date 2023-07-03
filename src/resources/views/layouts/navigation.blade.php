@@ -6,14 +6,20 @@
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
-                        <x-application-logo class="block h-9 w-auto fill-current text-gray-800" />
+                        <x-application-logo-nav class="block h-9 w-auto fill-current text-gray-800" />
                     </a>
                 </div>
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
+                        {{ __('ルーム一覧') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('make_room')" :active="request()->routeIs('make_room')">
+                        {{ __('ルーム作成') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('into_room')" :active="request()->routeIs('into_room')">
+                        {{ __('ルーム参加') }}
                     </x-nav-link>
                 </div>
             </div>
@@ -67,17 +73,27 @@
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                {{ __('Dashboard') }}
+            <x-responsive-nav-link :href="route('dashboard')" >
+                {{ __('メニュー') }}
             </x-responsive-nav-link>
+        </div>
+
+        <div class="px-4">
+            <div class="font-medium text-base text-gray-800">{{ Auth::user()->name }}</div>
+            <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>
         </div>
 
         <!-- Responsive Settings Options -->
         <div class="pt-4 pb-1 border-t border-gray-200">
-            <div class="px-4">
-                <div class="font-medium text-base text-gray-800">{{ Auth::user()->name }}</div>
-                <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>
-            </div>
+            <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                    {{ __('ルーム一覧') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('make_room')" :active="request()->routeIs('make_room')">
+                    {{ __('ルーム作成') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('into_room')" :active="request()->routeIs('into_room')">
+                    {{ __('ルーム参加') }}
+            </x-responsive-nav-link>
 
             <div class="mt-3 space-y-1">
                 <x-responsive-nav-link :href="route('profile.edit')">

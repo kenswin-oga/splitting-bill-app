@@ -1,0 +1,1 @@
+<img src="images/logo.png" class="app-logo-login" alt="Image description">

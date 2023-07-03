@@ -1,3 +1,165 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.make-room {
+  margin-top: 60px;
+}
+
+.top-text-size {
+  font-size: 50px;
+}
+
+.top-container {
+  padding-top: 10%;
+  /* margin-top: 0%; */
+}
+
+.centered {
+  text-align: center;
+}
+
+.margin-clear {
+  margin: 0;
+}
+
+.app-logo {
+  text-align: center; 
+  display: inline-block;
+  width: 60%;
+
+}
+
+.app-logo-nav {
+  width: 24%;
+}
+
+.app-logo-login {
+  width: 60%;
+  margin-left: 50px;
+}
+
+.logo-text {
+  font-family: 'Caveat', cursive;
+}
+
+.room-list {
+  margin-bottom: 5%;
+
+  font-size: 130%;
+}
+
+.room-list-name {
+  margin-left: 5%;
+  font-size: 150%;
+  font-family: "Hannari";
+}
+
+.room-in-button {
+  text-align: right;
+}
+
+#money-status-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.money-status {
+  width: 40%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.money-amount-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.money-amount-name {
+  width: 40%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.money-amount {
+  font-size: 150%;
+  font-weight: bold;
+  width: 40%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  text-align: right;
+}
+
+.room-header-container {
+  width:100%;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.room-name {
+  font-size: 150%;
+  font-weight: bold;
+  width: 70%;
+}
+
+.money-edit-button {
+  font-size: 150%;
+  color: #9ca3af;
+  font-weight: bold;
+  width: 40%;
+  text-align: right;
+}
+
+.positive-amount {
+  color: green;
+}
+
+.negative-amount {
+  color: red;
+}
+
+.money-form {
+  margin-top: 50%;
+}
+
+.back-button {
+  font-size: 80%;
+  color: #9ca3af;
+  font-weight: bold;
+  width: 40%;
+  text-align: right;
+}
+/* スマートフォン画面のスタイル */
+@media (max-width: 600px) {
+  /* 767px以下の画面幅に適用されるスタイル */
+
+    .app-logo {
+    width: 50%;
+    /* margin-left: 30px; */
+  }
+
+    .top-nav {
+      margin-right: 28%;
+  }
+
+    .top-container {
+      padding-top: 40%;
+  }
+
+    #money-status-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+    .money-status {
+      width: 80%;
+      padding-top: 5%;
+      padding-bottom: 5%;
+      margin-bottom: 10%;
+  }
+    
+}
